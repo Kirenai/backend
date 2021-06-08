@@ -4,7 +4,7 @@ spring:
       name: lucas
       password: lucas361
   datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     platform: mysql
     url: jdbc:mysql://localhost:3306/tasks_db?serverTimezone=UTC
     username: root
@@ -17,10 +17,11 @@ spring:
     show-sql: true
     properties:
       hibernate:
-        format_sql: false
-        dialect: org.hibernate.dialect.MySQL5Dialect
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
 
 server:
   error:
     include-message: always
     include-binding-errors: always
+    include-stacktrace: never
